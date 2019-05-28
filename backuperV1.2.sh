@@ -17,7 +17,7 @@ if ((SIZE<10000)) ; then
     sendmail $email  < $backup_bad_log	
 else 
     echo $date "Dump database is created!" >> $backup_good_log 
-    find $backup_dir -name "*.dump*.gz" -mtime +7 -type f -delete 
+    find $backup_dir -name "*.dump.gz" -mtime +7 -type f -delete 
 fi
 tar -cvzf $backup_files/$file web 
 find $backup_files -name "*.tar.gz" -mtime +7 -type f -delete
