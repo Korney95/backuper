@@ -1,4 +1,5 @@
 #!/bin/sh
+#OLD VERSION
 email=your@email.com
 container_id=$(docker ps | grep postgres |  awk '{printf $1"\n"}')
 date=`date +%Y-%m-%d-%H-%M`
